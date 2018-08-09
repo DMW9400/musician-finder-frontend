@@ -28,7 +28,7 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="App">
           <Switch>
-            <Route exact path="/login" component={Login} />
+            <Route exact path="/" component={Login} />
             <Route exact path="/create-user" component={UserInput}/>
             <Route path="/base" component={Container}/>
           </Switch>
