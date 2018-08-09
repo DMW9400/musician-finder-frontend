@@ -48,7 +48,7 @@ class ProfileEdit extends React.Component{
         ...this.state.user,
         [event.target.name]: event.target.value
       }
-    }
+    })
   }
 
 
