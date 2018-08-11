@@ -1,6 +1,6 @@
 const fetches = {
   loginFetch: (username,password) => {
-    return fetch('http://localhost:3000/api/v1/login', {
+    return fetch('https://musician-finder-backend.herokuapp.com/api/v1/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -14,7 +14,7 @@ const fetches = {
     }).then(res => res.json())
   },
   editFetch: (username,password) => {
-    return fetch('http://localhost:3000/api/v1/users/:id', {
+    return fetch('https://musician-finder-backend.herokuapp.com/api/v1/users/:id', {
       method: 'PATCH',
       headers: {
         'authorization': localStorage.getItem('token')
@@ -22,7 +22,7 @@ const fetches = {
     }).then(res => res.json())
   },
   fetchCurrentUser: () => {
-    return fetch('http://localhost:3000/api/v1/active_user', {
+    return fetch('https://musician-finder-backend.herokuapp.com/api/v1/active_user', {
       method: 'POST',
       headers: {
         'authorization': localStorage.getItem('token')
@@ -30,19 +30,19 @@ const fetches = {
     }).then(res => res.json())
   },
   fetchMessages: () => {
-    return fetch('http://localhost:3000/api/v1/messages')
+    return fetch('https://musician-finder-backend.herokuapp.com/api/v1/messages')
     .then(res => res.json())
   },
   fetchUserMessages: (recipientID) => {
-    return fetch(`http://localhost:3000/api/v1/users/${recipientID}/messages`)
+    return fetch(`https://musician-finder-backend.herokuapp.com/api/v1/users/${recipientID}/messages`)
     .then(res => res.json())
   },
   fetchUserInstruments: (userID) => {
-    return fetch(`http://localhost:3000/api/v1/users/${userID}/instruments`)
+    return fetch(`https://musician-finder-backend.herokuapp.com/api/v1/users/${userID}/instruments`)
     .then(res => res.json())
   },
   sendMessage: (currentUser, recipient,message) => {
-    return fetch(`http://localhost:3000/api/v1/messages`, {
+    return fetch(`https://musician-finder-backend.herokuapp.com/api/v1/messages`, {
       method: 'POST',
       headers:{
         'Accept': 'application/json',
