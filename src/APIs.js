@@ -41,7 +41,7 @@ const fetches = {
     return fetch(`https://musician-finder-backend.herokuapp.com/api/v1/users/${userID}/instruments`)
     .then(res => res.json())
   },
-  sendMessage: (currentUser, recipient,message) => {
+  sendMessage: (currentUser, recipient, message) => {
     return fetch(`https://musician-finder-backend.herokuapp.com/api/v1/messages`, {
       method: 'POST',
       headers:{

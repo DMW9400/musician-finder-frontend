@@ -161,7 +161,7 @@ class UserInput extends React.Component{
 
   handleSubmit = (event) => {
     event.preventDefault()
-    fetch(`http://localhost:3000/api/v1/users`, {
+    fetch(`https://musician-finder-backend.herokuapp.com/api/v1/users`, {
       method: 'POST',
       headers:{
         'Accept': 'application/json',
