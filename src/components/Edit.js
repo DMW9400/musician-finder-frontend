@@ -153,7 +153,7 @@ class ProfileEdit extends React.Component{
   }
   handleDelete = (event) => {
     event.preventDefault()
-    fetch(`http://localhost:3000/api/v1/users/${this.props.currentUser.id}`, {
+    fetch(`https://musician-finder-backend.herokuapp.com/api/v1/users/${this.props.currentUser.id}`, {
       method: 'DELETE',
       headers:{
         'Accept': 'application/json',
