@@ -27,7 +27,7 @@ class MessagePage extends React.Component{
   handleSubmit = (event) => {
     event.preventDefault()
     this.props.history.push(`/base/users`)
-    return fetch(`http://localhost:3000/api/v1/messages`, {
+    return fetch(`https://musician-finder-backend.herokuapp.com/api/v1/messages`, {
       method: 'POST',
       headers:{
         'Accept': 'application/json',
